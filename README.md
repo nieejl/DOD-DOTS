@@ -19,3 +19,17 @@ At this point it probably makes sense to get a quick overview of how Unity works
 Then I would recommend watching this talk about DOTS and the intent behind some of the features: "Building a Data-Oriented Future - Mike Acton"
 https://www.youtube.com/watch?v=u8B3j8rqYMw
 
+The previously mentioned material should have given a sufficient background. There are a few choices to make for the future direction. If the direction is focused around database layouts, 'Weaving Relations for Cache Performance', by Anastassia Ailamaki et al. from the VLDB conference in 2001 is a great read.
+
+It makes sense to consider how game workloads are typically not very much like OLTP workloads. Typically there is a need for examining much more data, but a lower amount of times (usually capped by the monitor / gpu capabilities). However, because there is a need to examine lots of data, the hardware can be utilized very well, by using vector operations and out of order execution to our advantage.
+
+I really recommend watching this video, to get a bit more insight into microarchitecture: https://youtu.be/rglmJ6Xyj1c
+This is well paired with the TMAM cookbook from intel: https://software.intel.com/content/www/us/en/develop/documentation/vtune-cookbook/top/methodologies/top-down-microarchitecture-analysis-method.html
+The user guide is also going to be very useful when diving into profiling: https://software.intel.com/content/www/us/en/develop/documentation/vtune-help/top.html
+
+How all that ties into game programming can to some extent be explained by having a look at the (somewhat dated, but still relevant) dodbook: https://www.dataorienteddesign.com/dodbook/
+
+There are a number of projects on DOTS performance that give good insight into how it is used, and what kind of performance it can deliver.
+This first one is an intel / unity project, showcasing performance differences.
+https://software.intel.com/content/www/us/en/develop/articles/get-started-with-the-unity-entity-component-system-ecs-c-sharp-job-system-and-burst-compiler.html
+
