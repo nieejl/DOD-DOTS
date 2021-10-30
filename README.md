@@ -33,3 +33,5 @@ There are a number of projects on DOTS performance that give good insight into h
 This first one is an intel / unity project, showcasing performance differences.
 https://software.intel.com/content/www/us/en/develop/articles/get-started-with-the-unity-entity-component-system-ecs-c-sharp-job-system-and-burst-compiler.html
 
+Other resources:
+Great blog with lots of info on ECS: https://gametorrahod.com/tag/unity-ecs/
